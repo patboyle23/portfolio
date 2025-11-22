@@ -38,11 +38,11 @@
             margin-top: 10px;
         }
 
-        nav {
+        /* nav {
             position: sticky;
             top: 0;
             display: inline-flex;
-            justify-content: flex-end; /* desktop: top-right */
+            justify-content: flex-end; /* desktop: top-right 
             padding: 20px 40px;
             flex-wrap: wrap;
             border: 2px solid white;
@@ -59,14 +59,67 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.2s ease, transform 0.2s ease; /* smooth hover effect */
+            transition: color 0.2s ease, transform 0.2s ease; /* smooth hover effect 
         }
-
 
         nav a:hover {
             color: #9fa2a4;
             transform: scale(1.1);
+        } */
+
+        /* Sticky upper-right nav */
+
+        nav {
+            position: fixed;              /* sticks to viewport */
+            top: 20px;                    /* distance from top */
+            right: 20px;                  /* distance from right */
+            display: inline-flex;          /* shrink-wrap around links */
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 8px;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(5px);
+            z-index: 999;
         }
+
+        /* Nav links */
+        nav a {
+            margin-left: 20px;             /* spacing between links */
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s ease, transform 0.2s ease; /* smooth hover */
+        }
+
+        /* Remove margin for first link */
+        nav a:first-child {
+            margin-left: 0;
+        }
+
+        /* Hover effect: color and bulge */
+        nav a:hover {
+            color: #9fa2a4;
+            transform: scale(1.1);
+        }
+
+        /* Responsive nav: center on small screens */
+        @media (max-width: 600px) {
+            nav {
+                position: fixed;           /* still fixed */
+                top: 0;
+                right: 0;
+                left: 0;
+                width: 100%;
+                justify-content: center;
+                padding: 10px 0;
+                border-radius: 0;
+            }
+
+            nav a {
+                margin: 10px;
+            }
+        }
+
 
         .project {
             border: 1px solid #ddd;
@@ -90,6 +143,7 @@
         .project a {
             color: white;
             transition: color 0.2s ease, transform 0.2s ease;
+            text-decoration:none;
         }
 
         .project a:hover {
