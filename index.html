@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
 <head>
-    <title>Patrick Boyle's Portfolio</title>
+    <meta charset = "UTF-8">
+    <meta name="portfolio" content="engineering portfolio recent grad"> 
+    <title> Patrick Boyle's Portfolio </title>
     <style>
         /* Body styling */
         body {
@@ -30,8 +32,8 @@
             font-size: 1.2em;
         }
 
-        .profile-pic {
-            width: 100px;
+        .banner-pic{
+            width: 100%;
             height: auto;
             border-radius: 10px;
             margin-top: 10px;
@@ -54,7 +56,7 @@
         }
 
         nav a:hover {
-            color: #007BFF; /* blue hover */
+            color: #9fa2a4; /* blue hover */
         }
 
         /* Projects styling */
@@ -67,6 +69,7 @@
         section {
             padding: 40px 20px;
         }
+
 
         /* Responsive navigation */
         @media (max-width: 600px) {
@@ -81,6 +84,10 @@
             .project {
                 margin: 10px 20px;
             }
+        }
+
+        .linkedin-logo{
+            width:42px; height:42px;
         }
     </style>
 </head>
@@ -97,8 +104,8 @@
     <!-- Header / Intro -->
     <header>
         <h1>Patrick Boyle</h1>
-        <p>Aerospace Engineering | Simulation | Python | MATLAB</p>
-        <img src="C172M Picture.jpg" class="profile-pic" alt="Profile Picture">
+        <p>About Me</p>
+        <img src="C172M Picture.jpg" class="banner-pic">
     </header>
 
     <!-- Projects Section -->
@@ -112,9 +119,10 @@
         </div>
 
         <div class="project">
-            <h3>CR3BP Moon Transfer Simulation</h3>
-            <p>Integrated equations of motion and analyzed trajectories in Python.</p>
-            <a href="files/trajectory_sim.pdf">View Report</a>
+            <h3>Trajectory of an Object about LaGrange Point 3</h3>
+            <p>Solved with ode45</p>
+            <a href="BOYLE_EMA471FinalProject.py">.py File</a>
+            <a href="BOYLE_EMA471FinalProject.pdf">Abstract with code pdf</a>
         </div>
     </section>
 
@@ -126,9 +134,10 @@
 
     <!-- Contact -->
     <section id="contact">
-        <h2>Contact</h2>
+        <h2>Let's Connect!</h2>
         <p>Email: patboyle23@gmail.com</p>
         <p>Phone: (203) 767-6207</p>
+        <a href="https://www.linkedin.com/in/patrick-boyle-94a358229/"><img src="Linkedin Logo Free.webp" class="linkedin-logo"></a>
     </section>
 
 </body>
