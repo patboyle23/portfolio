@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patrick Boyle's Portfolio</title>
+    <style>
+        /* Body styling */
+        body {
+            background: linear-gradient(to bottom right, #0d1b2a, #1b263b, #415a77);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        /* Navigation styling */
+        nav {
+            display: flex;
+            justify-content: flex-end; /* desktop: top-right */
+            padding: 20px 40px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s; /* smooth hover effect */
+        }
+
+        nav a:hover {
+            color: #007BFF; /* blue hover */
+        }
+
+        /* Projects styling */
+        .project {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 40px;
+        }
+
+        section {
+            padding: 40px 20px;
+        }
+
+        /* Responsive navigation */
+        @media (max-width: 600px) {
+            nav {
+                justify-content: center; /* center nav links on mobile */
+            }
+
+            nav a {
+                margin: 10px;       /* vertical spacing */
+            }
+
+            .project {
+                margin: 10px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Header / Intro -->
+    <header>
+        <h1>Patrick Boyle</h1>
+        <p>Aerospace Engineering | Simulation | Python | MATLAB</p>
+        <img src="C172M Picture.jpg" class="profile-pic" alt="Profile Picture">
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Cessna 172 Airfoil Visualization</h3>
+            <p>Plotted NACA 2412 airfoil from CSV data using Python & Matplotlib.</p>
+            <a href="files/airfoil_plot.png">View Plot</a>
+        </div>
+
+        <div class="project">
+            <h3>CR3BP Moon Transfer Simulation</h3>
+            <p>Integrated equations of motion and analyzed trajectories in Python.</p>
+            <a href="files/trajectory_sim.pdf">View Report</a>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <p>Manufacturing & aerospace background with military experience.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: patboyle23@gmail.com</p>
+        <p>Phone: (203) 767-6207</p>
+    </section>
+
+</body>
+</html>
+
+
+
+
