@@ -62,10 +62,6 @@
             transition: color 0.2s ease, transform 0.2s ease; /* smooth hover effect */
         }
 
-        nav a:first-child {
-            margin-left:0;
-
-        }
 
         nav a:hover {
             color: #9fa2a4;
@@ -87,21 +83,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Responsive navigation */
-        @media (max-width: 600px) {
-            nav {
-                justify-content: center; /* center nav links on mobile */
-            }
-
-            nav a {
-                margin: 10px;       /* vertical spacing */
-            }
-
-            .project {
-                margin: 10px 20px;
-            }
-        }
-
         .linkedin-logo {
             width:42px; height:42px;
         }
@@ -113,12 +94,12 @@
             transition: color 0.2s ease, transform 0.2s ease;
         }
 
-        a:hover {
+        .project a:hover {
             color: gray;
             transform: scale(1.1);
         }
 
-        a:visited {
+        .project a:visited {
             color: white;   
         }
 
@@ -129,7 +110,7 @@
 
     <!-- Navigation -->
     <nav>
-        <a href="#about me"> About Me</a>
+        <a href="#aboutme"> About Me</a>
         <a href="#projects"> Projects</a>
         <a href="#experience"> Experience</a>
         <a href="#contact"> Let's Connect</a>
@@ -138,20 +119,24 @@
     <!-- Header / Intro -->
     <header>
         <h1>Patrick Boyle</h1>
-        
         <img src="C172M Picture.jpg" class="banner-pic">
     </header>
+
+    <!-- About Me-->
+     <section id = "aboutme">
+        <h2>About Me</h2>
+        <p> I'm a recent graduate of the University of Wisconsin-Madison. Since finishing up at UW in August of 2025, I've been pursuing a private pilot's license under FAR Part 61. Areas of interest include propulsion, vibrations, and aerodynamics. </p>
+    </section>
 
     <!-- Experience -->
     <section id="experience">
         <h2>Experience</h2>
-        <p>Manufacturing & aerospace background with military experience.</p>
+        <p>Attach resume here</p>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-
         <div class="project">
             <h3>Cessna 172 xflr5 Analysis</h3>
             <p>Plotted NACA 2412 airfoil from CSV data using Python & Matplotlib.</p>
@@ -168,7 +153,7 @@
         </div>
         
         <div class="project">
-            <h4> CanoeKart TM</h4>
+            <h3> CanoeKart TM</h3>
             <ul>
                 <li> Solidworks model</li>
                 <li> Engineering Drawing 1</li>
@@ -177,12 +162,8 @@
         </div>
         
         <div class="project">
-
-
-
+            <h3> Experimental and Theoretical Analysis of a NACA 24012 Airfoil</h3>
         </div>
-
-
 
     </section>
 
