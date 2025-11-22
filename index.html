@@ -5,7 +5,7 @@
     <meta name="portfolio" content="engineering portfolio recent grad"> 
     <title> Patrick Boyle's Portfolio </title>
     <style>
-        /* Body styling */
+
         body {
             background: linear-gradient(to bottom right, #0d1b2a, #1b263b, #415a77);
             color: white;
@@ -14,7 +14,6 @@
             padding: 0;
         }
 
-        /* Header styling */
         header {
             display: flex;
             flex-direction: column;
@@ -39,12 +38,17 @@
             margin-top: 10px;
         }
 
-        /* Navigation styling */
         nav {
+            position: sticky;
+            top: 0;
             display: flex;
             justify-content: flex-end; /* desktop: top-right */
             padding: 20px 40px;
             flex-wrap: wrap;
+            border: 2px solid white;
+            z-index:999;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(5px);
         }
 
         nav a {
@@ -53,14 +57,13 @@
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s; /* smooth hover effect */
-            border: 1px solid white;
         }
 
         nav a:hover {
-            color: #9fa2a4; /* blue hover */
+            color: #9fa2a4;
+            transform: scale(1.1);
         }
 
-        /* Projects styling */
         .project {
             border: 1px solid #ddd;
             padding: 10px;
@@ -72,6 +75,9 @@
             padding: 40px 20px;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
 
         /* Responsive navigation */
         @media (max-width: 600px) {
@@ -91,30 +97,15 @@
         .linkedin-logo{
             width:42px; height:42px;
         }
-
-        .stickyyy{
-            position: sticky;
-            top: 0;
-            z-index: 999
-        }
         
-        a:link{
+        a:link {
             color: white;
             background-color:transparent;
-            text-decoration: underline;
         }
-
-        a:visited{
-            color: cornflowerblue;
-            background-color:transparent;
-            text-decoration: underline;
-        }
-
 
         a:hover {
             color: gray;
             background-color:transparent;
-            text-decoration: underline;
         }
 
     </style>
@@ -124,10 +115,10 @@
 
     <!-- Navigation -->
     <nav>
-        <a href="#about me" class="stickyyy"> About Me</a>
-        <a href="#projects" class="stickyyy"> Projects</a>
-        <a href="#experience" class="stickyyy"> Experience"</a>
-        <a href="#contact" class="stickyyy"> Let's Connect</a>
+        <a href="#about me"> About Me</a>
+        <a href="#projects"> Projects</a>
+        <a href="#experience"> Experience"</a>
+        <a href="#contact"> Let's Connect</a>
     </nav>
 
     <!-- Header / Intro -->
