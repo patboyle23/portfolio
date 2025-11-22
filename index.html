@@ -9,7 +9,7 @@
         body {
             background: linear-gradient(to bottom right, #0d1b2a, #1b263b, #415a77);
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: Montserrat, sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -53,6 +53,7 @@
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s; /* smooth hover effect */
+            border: 1px solid white;
         }
 
         nav a:hover {
@@ -91,6 +92,30 @@
             width:42px; height:42px;
         }
 
+        .stickyyy{
+            position: sticky;
+            top: 0;
+            z-index: 999
+        }
+        
+        a:link{
+            color: white;
+            background-color:transparent;
+            text-decoration: underline;
+        }
+
+        a:visited{
+            color: cornflowerblue;
+            background-color:transparent;
+            text-decoration: underline;
+        }
+
+
+        a:hover {
+            color: gray;
+            background-color:transparent;
+            text-decoration: underline;
+        }
 
     </style>
 </head>
@@ -99,9 +124,10 @@
 
     <!-- Navigation -->
     <nav>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Let's Connect</a>
+        <a href="#about me" class="stickyyy"> About Me</a>
+        <a href="#projects" class="stickyyy"> Projects</a>
+        <a href="#experience" class="stickyyy"> Experience"</a>
+        <a href="#contact" class="stickyyy"> Let's Connect</a>
     </nav>
 
     <!-- Header / Intro -->
@@ -141,7 +167,7 @@
     <section id="contact">
         <h2>Let's Connect!</h2>
         <p>Email: patboyle23@gmail.com</p>
-        <p>Phone: (203) 767-6207</p>
+        <p>Phone: (203) 767-6207 </p>
         <a href="https://www.linkedin.com/in/patrick-boyle-94a358229/"><img src="Linkedin Logo Free.jpg" class="linkedin-logo"></a>
     </section>
 
