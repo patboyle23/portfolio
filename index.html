@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-    <meta charset = "UTF-8">
-    <meta name="portfolio" content="engineering portfolio recent grad"> 
-    <title> Patrick Boyle's Portfolio </title>
+    <meta charset="UTF-8">
+    <meta name="portfolio" content="engineering portfolio recent grad">
+    <title>Patrick Boyle's Portfolio</title>
+
     <style>
 
         body {
@@ -21,43 +22,39 @@
             padding: 40px 20px;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        header p {
-            margin: 10px 0;
-            font-size: 1.2em;
-        }
-
-        .banner-pic{
+        .banner-pic {
             width: 100%;
-            height: auto;
             border-radius: 10px;
             margin-top: 10px;
         }
 
-        nav {
+        /* -----------------------------
+           STICKY TOP-RIGHT NAVIGATION
+        ------------------------------*/
+        .nav-container {
             position: sticky;
             top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;  /* pushes box to right */
+            z-index: 999;
+        }
+
+        nav {
             display: inline-flex;
-            justify-content: flex-end;
+            gap: 20px;
             padding: 20px 40px;
-            flex-wrap: wrap;
             border: 2px solid white;
-            z-index:999;
             background: rgba(0,0,0,0.3);
             backdrop-filter: blur(5px);
-            width: fit-content;
-            margin-left:auto;
+            border-radius: 10px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.2s ease, transform 0.2s ease; /* smooth hover effect */
+            transition: color 0.2s ease, transform 0.2s ease;
         }
 
         nav a:hover {
@@ -65,46 +62,31 @@
             transform: scale(1.1);
         }
 
+        /* Mobile version */
         @media (max-width: 600px) {
-            nav {
-                position: fixed;           
-                top: 0;
-                right: 0;
-                left: 0;
-                width: 100%;
-                justify-content: center;
-                padding: 10px 0;
-                border-radius: 0;
+            .nav-container {
+                justify-content: center; /* centered on small screens */
             }
 
-            nav a {
-                margin: 10px;
+            nav {
+                width: 90%;
+                justify-content: center;
+                border-radius: 0;
+                padding: 10px;
             }
         }
 
+        /* Project box styling */
         .projects {
             border: 1px solid #ddd;
             padding: 10px;
             margin: 10px 40px;
-            color: white;
         }
 
-        section {
-            padding: 40px 20px;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .linkedin-logo {
-            width:42px; height:42px;
-        }
-        
         .projects a {
             color: white;
+            text-decoration: none;
             transition: color 0.2s ease, transform 0.2s ease;
-            text-decoration:none;
         }
 
         .projects a:hover {
@@ -112,8 +94,17 @@
             transform: scale(1.1);
         }
 
-        .projects a:visited {
-            color: white;   
+        .linkedin-logo {
+            width: 42px;
+            height: 42px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        section {
+            padding: 40px 20px;
         }
 
     </style>
@@ -121,24 +112,26 @@
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#aboutme"> About Me</a>
-        <a href="#projects"> Projects</a>
-        <a href="#experience"> Experience</a>
-        <a href="#contact"> Let's Connect</a>
-    </nav>
+    <!-- TOP-RIGHT FLOATING NAV BAR -->
+    <div class="nav-container">
+        <nav>
+            <a href="#aboutme">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Let's Connect</a>
+        </nav>
+    </div>
 
-    <!-- Header / Intro -->
+    <!-- Header -->
     <header>
         <h1>Patrick Boyle</h1>
         <img src="C172M Picture.jpg" class="banner-pic">
     </header>
 
-    <!-- About Me-->
-     <section id = "aboutme">
+    <!-- About Me -->
+    <section id="aboutme">
         <h2>About Me</h2>
-        <p> I'm a recent graduate of the University of Wisconsin-Madison. Since finishing up at UW in August of 2025, I've been pursuing a private pilot's license under FAR Part 61. Areas of interest include propulsion, vibrations, and aerodynamics. </p>
+        <p>I'm a recent graduate of the University of Wisconsin-Madison. Since finishing up at UW in August of 2025, I've been pursuing a private pilot's license under FAR Part 61. Areas of interest include propulsion, vibrations, and aerodynamics.</p>
     </section>
 
     <!-- Experience -->
@@ -147,35 +140,36 @@
         <p>Attach resume here</p>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section id="projects">
         <h2>Projects</h2>
+
         <div class="projects">
             <h3>Cessna 172 xflr5 Analysis</h3>
             <p>Plotted NACA 2412 airfoil from CSV data using Python & Matplotlib.</p>
-            <a href="files/airfoil_plot.png"> View Plot </a>
+            <a href="files/airfoil_plot.png">View Plot</a>
         </div>
 
         <div class="projects">
             <h3>Trajectory of an Object about LaGrange Point 3</h3>
-            <p>Solved with ode45 </p>
+            <p>Solved with ode45</p>
             <ul>
-            <li> <a href="BOYLE_EMA471FinalProject.py"> Code File (.py)</a> </li>
-            <li> <a href="BOYLE_EMA471FinalProject.pdf">Abstract With Code (.pdf)</a> </li>
+                <li><a href="BOYLE_EMA471FinalProject.py">Code File (.py)</a></li>
+                <li><a href="BOYLE_EMA471FinalProject.pdf">Abstract With Code (.pdf)</a></li>
             </ul>
         </div>
-        
+
         <div class="projects">
-            <h3> CanoeKart TM</h3>
+            <h3>CanoeKart™</h3>
             <ul>
-                <li> Solidworks model</li>
-                <li> Engineering Drawing 1</li>
-                <li> Engineering Drawing 2</li>
+                <li>Solidworks model</li>
+                <li>Engineering Drawing 1</li>
+                <li>Engineering Drawing 2</li>
             </ul>
         </div>
-        
+
         <div class="projects">
-            <h3> Experimental and Theoretical Analysis of a NACA 24012 Airfoil</h3>
+            <h3>Experimental and Theoretical Analysis of a NACA 24012 Airfoil</h3>
         </div>
 
     </section>
@@ -184,13 +178,9 @@
     <section id="contact">
         <h2>Let's Connect!</h2>
         <p>Email: patboyle23@gmail.com</p>
-        <p>Phone: (203) 767-6207 </p>
-        <img src="https://www.linkedin.com/feed/?doFeedRefresh=true&nis=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B33KX%2BrDQToqApKEBNdEPOQ%3D%3D" class="linkedin-logo">
+        <p>Phone: (203) 767-6207</p>
+        <img src="LinkedinLogo.jpg" class="linkedin-logo">
     </section>
 
 </body>
 </html>
-
-
-
-
