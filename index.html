@@ -38,11 +38,11 @@
             margin-top: 10px;
         }
 
-        /* nav {
+        nav {
             position: sticky;
             top: 0;
             display: inline-flex;
-            justify-content: flex-end; /* desktop: top-right 
+            justify-content: flex-end;
             padding: 20px 40px;
             flex-wrap: wrap;
             border: 2px solid white;
@@ -51,43 +51,13 @@
             backdrop-filter: blur(5px);
             width: fit-content;
             margin-left:auto;
-            
         }
 
         nav a {
-            margin-left: 20px;
             color: white;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.2s ease, transform 0.2s ease; /* smooth hover effect 
-        }
-
-        nav a:hover {
-            color: #9fa2a4;
-            transform: scale(1.1);
-        } */
-
-    
-
-        nav {
-            position: sticky;              /* sticks to viewport */
-            top: 20px;                    /* distance from top */
-            right: 20px;                  /* distance from right */
-            display: inline-flex;          /* shrink-wrap around links */
-            padding: 10px 20px;
-            border: 2px solid white;
-            border-radius: 8px;
-            background: rgba(0,0,0,0.3);
-            backdrop-filter: blur(5px);
-            z-index: 999;
-        }
-
-        nav a {
-            margin-left: 20px;             
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.2s ease, transform 0.2s ease; 
+            transition: color 0.2s ease, transform 0.2s ease; /* smooth hover effect */
         }
 
         nav a:hover {
@@ -112,7 +82,7 @@
             }
         }
 
-        .project {
+        .projects {
             border: 1px solid #ddd;
             padding: 10px;
             margin: 10px 40px;
@@ -180,7 +150,7 @@
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
+        <div class="projects">
             <h3>Cessna 172 xflr5 Analysis</h3>
             <p>Plotted NACA 2412 airfoil from CSV data using Python & Matplotlib.</p>
             <a href="files/airfoil_plot.png"> View Plot </a>
