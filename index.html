@@ -28,31 +28,34 @@
             margin-top: 10px;
         }
 
-        nav {
-            position: fixed;
+        .sticky {
+            position: sticky;
             top: 20px;
-            left: 20px;
+            margin-left: 20px;
             
-            display: inline-flex;
-            gap: 20px;
             padding: 20px 30px;
-
-            border: 2px solid white;
             background: rgba(0,0,0,0.3);
             backdrop-filter: blur(5px);
+            border: 2px solid white;
             border-radius: 10px;
+            width: fit-content;
 
             z-index: 1000;
         }
+        
+        .sticky nav {
+            display: flex;
+            gap: 20px
+        }
 
-        nav a {
+        .sticky nav a {
             color: white;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.2s ease, transform 0.2s ease;
         }
 
-        nav a:hover {
+        .sticky nav a:hover {
             color: #9fa2a4;
             transform: scale(1.1);
         }
@@ -93,13 +96,14 @@
 <body>
 
     <!-- TOP-RIGHT FLOATING NAV BAR -->
-    <nav>
-        <a href="#aboutme">About Me</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Let's Connect</a>
-    </nav>
- 
+     <div class="sticky">
+        <nav>
+            <a href="#aboutme">About Me</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Let's Connect</a>
+        </nav>
+    </div>
 
     <!-- Header -->
     <header>
