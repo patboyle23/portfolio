@@ -28,23 +28,18 @@
             margin-top: 10px;
         }
 
-        .nav-container {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 100%;
-            justify-content: flex-end;  /* pushes box to right */
-            z-index: 999;
-        }
-
         nav {
+            position: sticky;
             display: inline-flex;
-            gap: 20px;
+            margin-left: auto;
+            width: fit-content;
+            top: 20px;
             padding: 20px 40px;
             border: 2px solid white;
             background: rgba(0,0,0,0.3);
             backdrop-filter: blur(5px);
             border-radius: 10px;
+            z-index: 1000;
         }
 
         nav a {
@@ -95,14 +90,13 @@
 <body>
 
     <!-- TOP-RIGHT FLOATING NAV BAR -->
-    <div class="nav-container">
-        <nav>
-            <a href="#aboutme">About Me</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Let's Connect</a>
-        </nav>
-    </div>
+    <nav>
+        <a href="#aboutme">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Let's Connect</a>
+    </nav>
+ 
 
     <!-- Header -->
     <header>
