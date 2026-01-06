@@ -1,15 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<style>
+    body {
+        background: linear-gradient(to bottom right, #0d1b2a, #1b263b, #415a77);
+        color: white;
+        font-family: Montserrat, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 20px;
+    }
+
+    .banner-pic {
+        display: block;
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        
+        padding: 20px 30px;
+        background: rgba(0,0,0,0.3);
+        backdrop-filter: blur(5px);
+        border: 2px solid white;
+        border-radius: 10px;
+        width: fit-content;
+
+        z-index: 1000;
+    }
+
+    .sticky nav {
+        display: flex;
+        gap: 20px
+    }
+
+    .sticky nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .sticky nav a:hover {
+        color: #9fa2a4;
+        transform: scale(1.1);
+    }
+
+    .projects {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin: 10px 40px;
+    }
+
+    .projects a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .projects a:hover {
+        color: gray;
+        transform: scale(1.1);
+    }
+
+    .linkedin-logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+</style>
+
 <head>
     <meta charset="UTF-8">
     <meta name="portfolio" content="engineering portfolio">
     <title>Patrick Boyle's Portfolio</title>
-    <link rel="Stylesheet"  href="./style.css" />
+    <link rel="stylesheet"  href="./style.css" />
 </head>
 
 <body>
-    
+
      <div class="sticky">
         <nav>
             <a href="#aboutme">About Me</a>
